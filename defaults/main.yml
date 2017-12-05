@@ -2,7 +2,7 @@
 
 # choose nodejs hardware architecture,
 # typically 'armv6l' (Pi Model A, B, B+ or Zero) or 'armv7l' (Pi 2 Model B or Pi 3 Model B)
-pimatic_nodejs_arch: ""
+pimatic_nodejs_arch: "armv7l"
 # where should nodejs be installed to
 pimatic_nodejs_install_dir: "/usr/local"
 # name of the directory in the user's home directory where pimatic should be installed to
@@ -10,7 +10,7 @@ pimatic_app_dir: "pimatic-app"
 
 
 # port pimatic's web frontend will listen on, we will also wait_for pimatic to start up on that port
-pimatic_port: 8080
+pimatic_port: 80
 
 # pimatic configuration
 pimatic_config_template: config.json.j2
@@ -22,11 +22,11 @@ pimatic_waitfor_startup: true
 pimatic_ssl: false
 # certificate subject
 pimatic_ssl_cn: "{{ ansible_fqdn }}"
-pimatic_ssl_c: "DE"
-pimatic_ssl_st: "Berlin"
-pimatic_ssl_l: "Berlin"
+pimatic_ssl_c: "HU"
+pimatic_ssl_st: "Budapest"
+pimatic_ssl_l: "Budapest"
 pimatic_ssl_o: "pimatic"
 pimatic_ssl_ou: "pimatic"
 
 # decide to install pigpio (package may not be available on Ubuntu/Debian)
-pimatic_install_pigpio: true
+pimatic_install_pigpio: false
